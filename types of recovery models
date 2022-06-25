@@ -1,0 +1,26 @@
+/*Find recovery mode for each database*/
+CREATE DATABASE [Admin]
+go  
+
+
+/*Excluding system database. (comment out the where clause to find recovery modes for system dbs)*/
+select [name], DATABASEPROPERTYEX ([name],'recovery') As RecoveryMode
+from sysdatabases
+where name not in('master','model','msdb','tempdb')
+
+
+/*Change the recovery mode for database*/
+Use master
+Go 
+
+/*set recovery model to simple*/
+Alter database Admin
+Set recovery simple;
+go 
+
+
+/*Set recovery model to full*/
+Alter database Admin
+set recovery full;
+
+
