@@ -1,0 +1,11 @@
+
+EXECUTE AS USER = 'user_name';  
+SELECT * FROM fn_my_permissions('table_name', 'OBJECT')   
+ORDER BY subentity_name, permission_name ;     
+GO  -- SQL Server check user permissions on table
+
+
+EXECUTE AS USER = 'test_user';  
+SELECT * FROM fn_my_permissions('Production.Location','object')   
+ORDER BY subentity_name, permission_name ;     
+GO
