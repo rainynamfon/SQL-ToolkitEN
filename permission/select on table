@@ -1,0 +1,14 @@
+--SQL Server check user permissions (SELECT) on table 
+
+USE database_name
+EXECUTE AS USER = 'username';  
+SELECT * FROM fn_my_permissions('table_name', 'OBJECT')
+WHERE permission_name = 'SELECT'
+GO 
+
+
+USE AdventureWorks2019
+EXECUTE AS USER = 'test_user';  
+SELECT * FROM fn_my_permissions('person.person', 'OBJECT')
+WHERE permission_name = 'SELECT'
+GO 
