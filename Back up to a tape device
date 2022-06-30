@@ -1,0 +1,7 @@
+USE SQLTestDB;
+GO
+BACKUP DATABASE SQLTestDB
+   TO TAPE = '\\.\Tape0'
+   WITH NOINIT,
+      NAME = 'Full Backup of SQLTestDB';
+GO
