@@ -1,0 +1,13 @@
+-- Create a logical backup device,
+-- SQLTestDB_Bak_Tape, for tape device \\.\tape0.
+USE master;
+GO
+EXEC sp_addumpdevice 'tape', 'SQLTestDB_Bak_Tape', '\\.\tape0'; USE SQLTestDB;
+GO
+BACKUP DATABASE SQLTestDB
+   TO SQLTestDB_Bak_Tape
+   WITH FORMAT,
+      MEDIANAME = 'SQLTestDB_Bak_Tape',
+      MEDIADESCRIPTION = '\\.\tape0',
+      NAME = 'Full Backup of SQLTestDB';
+GO
