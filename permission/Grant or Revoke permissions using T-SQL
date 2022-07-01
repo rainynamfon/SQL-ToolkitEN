@@ -1,0 +1,6 @@
+USE <database-name>
+--GRANT Permissions Syntax
+GRANT <permissions> ON <db-object> TO <user-name, login-name, or group>
+
+--REVOKE Permissions Syntax
+REVOKE <permissions> ON <db-object> FROM <user-name, login-name, or group>
