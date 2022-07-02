@@ -29,3 +29,4 @@ WHILE   @@FETCH_STATUS = 0
     CLOSE   KillCursor
  
 DEALLOCATE  KillCursor
+,,,,
