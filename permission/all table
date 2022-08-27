@@ -14,4 +14,4 @@ FROM sys.database_permissions join sys.objects
      on sys.database_permissions.grantee_principal_id =
      sys.database_principals.principal_id
 
-WHERE sys.database_principals.name = 'test_user' --SQL Server check user permissions on all tables
+WHERE sys.database_principals.name = 'test_user' --SQL Server check user permissions on all tables..
