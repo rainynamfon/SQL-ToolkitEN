@@ -1,6 +1,6 @@
 name
 --This is the login_name that was assigned in CREATE LOGIN statement
-
+..
 principal_id
 --Numeric value
 
