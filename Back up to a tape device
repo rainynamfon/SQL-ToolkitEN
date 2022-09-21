@@ -5,3 +5,4 @@ BACKUP DATABASE SQLTestDB
    WITH NOINIT,
       NAME = 'Full Backup of SQLTestDB';
 GO
+..
